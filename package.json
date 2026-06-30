@@ -3,27 +3,24 @@
     "dependencies": {},
     "keywords": [],
     "name": "calculatorface",
+    "version": "1.0.0",
     "pebble": {
-        "displayName": "calculator_watchface",
-        "enableMultiJS": true,
-        "messageKeys": [],
+        "displayName": "Calculator",
         "projectType": "native",
-        "resources": {
-            "media": []
-        },
         "sdkVersion": "3",
+        "uuid": "60192181-9ef3-4499-b8fd-36f63b76a97f",
+        "enableMultiJS": false,
+        "messageKeys": [],
         "targetPlatforms": [
             "emery",
             "gabbro"
         ],
-        "uuid": "60192181-9ef3-4499-b8fd-36f63b76a97f",
+        "capabilities": ["touch"],
         "watchapp": {
             "watchface": true
         },
-    "capabilities": ["touch"],
-    "resources": {
-      "media": []
+        "resources": {
+            "media": []
+        }
     }
-    },
-    "version": "1.0.0"
 }
