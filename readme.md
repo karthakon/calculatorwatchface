@@ -4,6 +4,11 @@ Calculator Watch
 A fully functional calculator built as a Pebble watchapp for the Pebble Time 2
 and Pebble Round 2, with a real-time clock display and full touch-screen input.
 
+LIMITATION: This is a watchapp, not a watchface. PebbleOS only delivers touch
+events to watchapps. It displays the time inside the app's display panel when
+open, but it cannot be set as your idle/default watchface, and it will not
+appear automatically on wrist raise.
+
 Platform  : Pebble Time 2 and Pebble Round 2
 SDK       : Pebble SDK 6.x
 Language  : C
@@ -140,12 +145,11 @@ All tweaks are made in src/main.c unless otherwise noted.
 Make it a permanent watch face
 -------------------------------
 
-In package.json, change:
-
-  "watchface": true
-
-This removes the back-button exit and allows the watch to display the app
-automatically on wrist raise.
+Not possible. Setting "watchface": true in package.json disables touch
+delivery entirely, since PebbleOS only sends touch events to watchapps. The
+calculator would build but every button tap would do nothing. This app must
+stay a watchapp; it can only show the time while open, not as your idle
+display.
 
 
 Add haptic feedback on every button press
@@ -170,9 +174,12 @@ In draw_display(), replace the snprintf call with:
 Map the physical SELECT button to AC (All Clear)
 -------------------------------------------------
 
-In window_load(), after the touch registration line, add:
+By default SELECT returns to the time display, not AC. To remap it to AC
+instead, in select_click_handler() replace the call to revert_to_time() with:
 
-  window_single_click_subscribe(BUTTON_ID_SELECT, (ClickHandler)c_ac);
+  c_reset();
+  g.active = true;
+  layer_mark_dirty(s_canvas);
 
 
 Change button colours
