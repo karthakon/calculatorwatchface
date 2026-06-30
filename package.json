@@ -19,7 +19,11 @@
         "uuid": "60192181-9ef3-4499-b8fd-36f63b76a97f",
         "watchapp": {
             "watchface": true
-        }
+        },
+    "capabilities": ["touch"],
+    "resources": {
+      "media": []
+    }
     },
     "version": "1.0.0"
 }
