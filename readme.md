@@ -12,17 +12,6 @@ License   : MIT
 
 
 --------------------------------------------------------------------------------
-SCREENSHOTS
---------------------------------------------------------------------------------
-
-Add screenshots to a /screenshots folder in this repository after capturing
-them from the PebbleCloud emulator.
-
-  screenshots/time2.png    - Pebble Time 2 (rectangular screen)
-  screenshots/round2.png   - Pebble Round 2 (round screen)
-
-
---------------------------------------------------------------------------------
 FEATURES
 --------------------------------------------------------------------------------
 
