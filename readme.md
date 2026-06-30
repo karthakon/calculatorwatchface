@@ -95,12 +95,11 @@ Build Steps
 -----------
 
   1. Log in to PebbleCloud
-  2. Create a new project and select Watchapp
+  2. Create a new project and select Watchapp and Pebble C SDK
   3. In the file tree, open src/main.c and replace its contents with the
      contents of this repository's src/main.c
-  4. Open package.json and replace its contents with this repository's
-     package.json
-  5. Click the UUID field in package.json and select Generate UUID
+  4. Open Settings uncheck everythign except emery and gabbro, set app kind to watchapp
+  5. Click the UUID field in and select Generate UUID
   6. Verify that targetPlatforms matches your device:
        time2   for Pebble Time 2
        round2  for Pebble Round 2
