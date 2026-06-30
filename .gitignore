@@ -1,0 +1,13 @@
+# Pebble build output
+build/
+*.pbw
+*.pbi
+*.pbz
+
+# CloudPebble / SDK
+.pebble/
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
